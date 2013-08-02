@@ -729,6 +729,13 @@
         
         [tmpl writeToFile:indexFile];
         
+        //channel.html
+        NSString* chfil = [outputDir stringByAppendingPathComponent:@"channel.html"];
+        
+        tmpl = [CCBPublisherTemplate templateWithFile:@"channel-html5.txt"];
+        
+        [tmpl writeToFile:chfil];
+        
         // Generate boot-html5.js file
         
         NSString* bootFile = [outputDir stringByAppendingPathComponent:@"boot-html5.js"];
